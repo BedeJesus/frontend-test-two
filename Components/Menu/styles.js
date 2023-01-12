@@ -8,9 +8,9 @@ export const Container = styled.div`
     justify-content: space-between;
     padding: 0.6em;
     color: yellow;
-    height: 3.7em;
-    box-shadow: 0 0 10px 2px black;
+    height: 5em;
     background-color: black;
+    box-shadow: 0 0 10px 2px black;
 `
 
 export const StarWars = styled(Link)`
@@ -20,6 +20,12 @@ export const StarWars = styled(Link)`
     margin-left: 2%;
     text-decoration: none;
     color: yellow;
+    background-color: red;
+
+    @media(max-width : 1000px) {
+    width: 30em;
+        
+    }
 
 `
 
@@ -30,6 +36,8 @@ export const Buttons = styled.div`
     font-size: 1.5em;
     width: 30em;
     overflow: hidden;
+    
+   
 
     a {
     font-family: 'Star Jedi';
@@ -41,25 +49,36 @@ export const Buttons = styled.div`
     font-family: 'Star Jedi';
     }
 
- @media(max-width : 1000px) {
+    @media(max-width : 1000px) {
     display: none;
+    
+    
     }
+
+    
  
 
 }
 
+`
+
+export const ToggleOne = styled.div`
+
+    margin-top: 1%;   
     
+    
+    @media(max-width : 1000px) {
+        display: none;
+    }
 
 `
 
-export const Togglee = styled.div`
-
-    margin-top: 1.2%;    
+export const ToggleTwo = styled.div`
     
     @media(max-width : 1000px) {
-        margin-top: 4%;        
+        margin-top: 6%;        
         margin-right: 1em;
-
+        
     }
 
 `

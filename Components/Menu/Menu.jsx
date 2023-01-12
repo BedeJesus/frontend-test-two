@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import Toggle from './Toggle'
+import Toggle from '../Toggle/Toggle'
 import { List, X } from 'phosphor-react'
 import Sidebar from './SideBar/SideBar'
 import { ThemeContext } from '../../pages/_app'
 import { useContext } from 'react'
-import {Container,Buttons,Togglee,SubMenu, StarWars} from './styles'
+import { Container, Buttons, Togglee, SubMenu, StarWars, ToggleTwo, ToggleOne } from './styles'
 
 
 export default function Menu() {
 
-    const {sideBar,showSideBar} = useContext(ThemeContext)
+    const { sideBar, showSideBar } = useContext(ThemeContext)
 
 
 
@@ -20,17 +20,24 @@ export default function Menu() {
 
             <Buttons>
 
-                <Toggle />
+                <ToggleOne>
+                    <Toggle />
+                </ToggleOne>
+
+
+
                 <Link href='/characters'>Characters</Link>
                 <Link href='/films'>Films</Link>
                 <Link href='/planets'>Planets</Link>
-
             </Buttons>
 
             <SubMenu>
-                <Togglee>
+
+                <ToggleTwo>
                     <Toggle />
-                </Togglee>
+                </ToggleTwo>
+
+
 
                 {sideBar ? (
                     <>
@@ -42,6 +49,7 @@ export default function Menu() {
                 )}
 
             </SubMenu>
+
         </Container>
     )
 }

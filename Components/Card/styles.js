@@ -10,7 +10,7 @@ export const Container = styled.div`
     border: 3px solid red;
     border-radius: 7px;
     width: 15em;
-    height: 15em;
+    height: 16em;
     padding: 1%;
     font-family: 'Kumbh Sans', sans-serif;
     box-shadow: 10px 8px 13px rgb(0, 0, 0);
@@ -23,15 +23,16 @@ export const Container = styled.div`
 
 span{
     color: yellow;
+    margin-left:3%;
 }
 
 
 `
 
 
-export const Name = styled.p`
+export const Name = styled.h3`
 
-color: Yellow;
+    color: Yellow;
     font-weight: bold;
     font-size: 1.5em;
     padding-bottom: 10%;
@@ -41,7 +42,7 @@ color: Yellow;
 export const Description = styled.p`
 
     display: flex;
-    margin-left: 4% ;
+    margin:0 3%;
 
 
 `
