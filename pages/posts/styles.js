@@ -25,15 +25,16 @@ margin-top: 1%;
 
 export const FilmCard = styled.div`
 
-display: flex;
+    display: flex;
     flex-direction: column;
     background-color: black;
     margin-bottom: 1em;
     height: 23em;
     width: 25em;
-    border: 3px solid red;
+    border: 4px solid red;
     border-radius: 10px;
     box-shadow: 10px 8px 13px rgb(0, 0, 0);
+
 
     h1 {
     font-size: 1.5em;

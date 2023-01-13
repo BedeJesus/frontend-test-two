@@ -20,7 +20,6 @@ export const StarWars = styled(Link)`
     margin-left: 2%;
     text-decoration: none;
     color: yellow;
-    background-color: red;
 
     @media(max-width : 1000px) {
     width: 30em;

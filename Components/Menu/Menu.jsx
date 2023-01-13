@@ -16,7 +16,7 @@ export default function Menu() {
     return (
         <Container>
 
-            <StarWars href='/'>Star Wars</StarWars>
+            <StarWars href='/'>Blog</StarWars>
 
             <Buttons>
 
@@ -26,9 +26,9 @@ export default function Menu() {
 
 
 
-                <Link href='/characters'>Characters</Link>
-                <Link href='/films'>Films</Link>
-                <Link href='/planets'>Planets</Link>
+                <Link href='/users'>users</Link>
+                <Link href='/posts'>Posts</Link>
+                <Link href='/planets'>Colocar Aqui</Link>
             </Buttons>
 
             <SubMenu>
