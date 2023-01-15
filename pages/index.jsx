@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
-// import api from '../../utils/api'
 import Card from '../Components/Card/Card'
-import { Container, Carrousel, Loading } from './styles'
+import { Container, Carrousel, Loading, Test } from './styles'
 import axios from "axios";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -45,14 +44,26 @@ export default function Row() {
         }
     }, [])
 
+    useEffect(() => {
 
-    function SetSlidesPerView() {
-        if (window.innerWidth <= 1000) {
-            return 2
-        } else {
-            return 4
+        function SetSlidesPerView() {
+            if (window.innerWidth <= 1000) {
+                return 2
+            } else {
+                return 4
+            }
         }
-    }
+
+    }, [])
+
+
+    // function SetSlidesPerView() {
+    //     if (window.innerWidth <= 1000) {
+    //         return 2
+    //     } else {
+    //         return 4
+    //     }
+    // }
 
     return (
         <Container>
@@ -72,6 +83,8 @@ export default function Row() {
                             navigation={true}
 
                         >
+
+
 
                             <SwiperSlide><Card person={people[18]}
                                 description='The main character od the saga,son of Anakin Skywalker with princess Padmé. Became a Jedi to fight the Empire'
@@ -100,6 +113,8 @@ export default function Row() {
                             <SwiperSlide><Card person={people[27]}
                                 description='Yoda was a legendary Jedi Master who led the Jedi Order in the years leading up to its destruction by the Sith. He was the mentor of Luke Skywalker'
                                 type={'character'} /></SwiperSlide>
+
+
 
                         </Swiper>
 

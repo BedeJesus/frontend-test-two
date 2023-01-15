@@ -1,21 +1,20 @@
 import { useEffect, useState, useRef } from 'react'
 import Pagination from '../../Components/Pagination/Pagination';
 
-import { Container, AllFilms, FilmCard, Loading } from './styles'
+import { Container, AllPosts, PostCard, Loading } from './styles'
 
 
 export default function Posts({ posts }) {
 
     const [loading, setLoading] = useState(true)
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1)
     const postsInPage = 15
 
-    // Get current posts
-    const lastPostIndex = currentPage * postsInPage;
-    const firstPostIndex = lastPostIndex - postsInPage;
-    const currentPosts = posts.slice(firstPostIndex, lastPostIndex);
+    const lastPostIndex = currentPage * postsInPage
+    const firstPostIndex = lastPostIndex - postsInPage
+    const currentPosts = posts.slice(firstPostIndex, lastPostIndex)
 
-    // Change page
+
     const paginate = pageNumber => {
         setCurrentPage(pageNumber)
 
@@ -29,19 +28,19 @@ export default function Posts({ posts }) {
             {loading ? (
 
                 <>
-                    <h1>All Films</h1>
+                    <h1>All Posts</h1>
 
-                    <AllFilms>
+                    <AllPosts>
 
                         {currentPosts.map((post) => (
 
-                            <FilmCard>
+                            <PostCard>
                                 <h1>{post.title}</h1>
                                 <p> <span>Resume:</span> {post.body}</p>
-                            </FilmCard>
+                            </PostCard>
                         ))}
 
-                    </AllFilms>
+                    </AllPosts>
 
                     <Pagination itensInPage={postsInPage}
                         totalItens={posts.length}

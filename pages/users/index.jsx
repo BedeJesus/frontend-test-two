@@ -1,24 +1,22 @@
-import { useEffect, useState, useRef } from 'react'
+import { useState } from 'react'
 import Pagination from '../../Components/Pagination/Pagination';
-import { Container, AllCharacters, CharacterCard, Loading } from './styles'
+import { Container, AllUsers, UserCard, Loading } from './styles'
 
 export default function Users({ users }) {
 
     const [loading, setLoading] = useState(true)
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1)
     const usersInPage = 16
 
+    const lastUserIndex = currentPage * usersInPage
+    const firstUserIndex = lastUserIndex - usersInPage
+    const currentUsers = users.slice(firstUserIndex, lastUserIndex)
 
-    // Get current posts
-    const lastUserIndex = currentPage * usersInPage;
-    const firstUserIndex = lastUserIndex - usersInPage;
-    const currentUsers = users.slice(firstUserIndex, lastUserIndex);
 
-    // Change page
-    const paginate = pageNumber =>{
+    const paginate = pageNumber => {
         setCurrentPage(pageNumber)
-        
-    } ;
+
+    }
 
     return (
         <Container>
@@ -26,23 +24,23 @@ export default function Users({ users }) {
             {loading ? (
 
                 <>
-                    <h1>users in the blog</h1>
+                    <h1>users on the blog</h1>
 
-                    <AllCharacters>
+                    <AllUsers>
 
                         {currentUsers.map((user) => (
 
-                            <CharacterCard key={user.id}>
+                            <UserCard key={user.id}>
                                 <h1>{user.first_name} {user.last_name}</h1>
                                 <p> <span>User Name:</span> {user.username}</p>
                                 <p> <span>Email:</span> {user.email}</p>
                                 <p> <span>Gender:</span> {user.gender}</p>
-                                <p> <span>Phone Number: </span> {user.phone_number}</p>
+                                <p> <span>Phone Number: </span> {user.phone_number.substr(0, 18)}</p>
                                 <p> <span>Id: </span>{user.id}</p>
-                            </CharacterCard>
+                            </UserCard>
                         ))}
 
-                    </AllCharacters>
+                    </AllUsers>
 
                     <Pagination itensInPage={usersInPage}
                         totalItens={users.length}

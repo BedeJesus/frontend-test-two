@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    background-color: darkslategrey;
+    background-color: ${props => props.theme.colors.primary_background};
     padding-top: 1.5em;
 
     h1 {
-    color: yellow;
+    color: ${props => props.theme.colors.contrast};
     margin-left: 2.5%;
     font-family: 'Star Jedi';
     
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 `
 
-export const AllCharacters = styled.div`
+export const AllUsers = styled.div`
 
     display: flex;
     flex-wrap: wrap;
@@ -22,11 +22,11 @@ export const AllCharacters = styled.div`
     margin-top: 3%;
 `
 
-export const CharacterCard = styled.div`
+export const UserCard = styled.div`
 
-display: flex;
+    display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: ${props => props.theme.colors.card_background};
     margin-bottom: 1em;
     height: 15em;
     width: 21em;
@@ -38,17 +38,18 @@ display: flex;
     font-size: 1.5em;
     display: flex;
     justify-content: center;
-    color: yellow;
+    color: ${props => props.theme.colors.contrast};
 }
 
 span {
-    color: aquamarine;
+    color: ${props => props.theme.colors.contrast};
+    font-weight: 700;
     font-family: 'Kumbh Sans', sans-serif;
     margin: 5% 0 0 5%;
 }
 
 p {
-    color: yellow;
+    color: ${props => props.theme.colors.text};
     font-family: 'Kumbh Sans', sans-serif;
     margin: 5% 0 0 5%;
 }

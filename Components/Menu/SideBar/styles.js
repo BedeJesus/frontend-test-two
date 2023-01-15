@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    background-color: hsl(230, 21%, 11%,0.9);
+    background-color: ${props => props.theme.colors.secundary_background};
+    opacity: 0.8;
     position:absolute;
     height: 14em;
     top: 4.9em;

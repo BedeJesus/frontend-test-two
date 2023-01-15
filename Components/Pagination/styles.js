@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.ul`
 
     display: flex;
-    
     justify-content: space-evenly;
     align-items: center;
     height: 5em;
@@ -11,12 +10,12 @@ export const Container = styled.ul`
  button {
     
     background-color: transparent;
-    border: 0.125em solid yellow;
+    border: 0.125em solid ${props => props.theme.colors.contrast};
     border-radius: 1em;
-    color: yellow;
+    color: ${props => props.theme.colors.contrast};
     cursor: pointer;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
     padding: 1em 2.3em;
     text-align: center;
@@ -28,7 +27,7 @@ export const Container = styled.ul`
 
     &:hover {
     color: black;
-    background-color: yellow;
+    background-color: ${props => props.theme.colors.contrast};
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
    
@@ -53,33 +52,6 @@ export const Container = styled.ul`
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /* button{
-        background-color: darkslategrey;
-        color: yellow;
-        font-size:2em;
-        height: 2em;
-        width: 5em;
-        border: 3px solid black;
-        border-radius: 5px;
-
-        &:hover{
-            cursor: pointer;
-            background-color: yellow;
-            color: black;
-
-        }
-    } */
-
 
 
 

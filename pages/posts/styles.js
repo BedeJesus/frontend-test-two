@@ -2,32 +2,32 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-background-color: darkslategrey;
+background-color: ${props => props.theme.colors.primary_background};
 padding-top: 1.5em;
 
 h1 {
-    color: yellow;
+    color: ${props => props.theme.colors.contrast};
     margin-left: 2.5%;
     font-family: 'Star Jedi';
 }
 
 `
 
-export const AllFilms = styled.div`
+export const AllPosts = styled.div`
 
 display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
-margin-top: 1%;
+margin-top: 3%;
 
 `
 
 
-export const FilmCard = styled.div`
+export const PostCard = styled.div`
 
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: ${props => props.theme.colors.card_background};
     margin-bottom: 1em;
     height: 23em;
     width: 25em;
@@ -40,19 +40,20 @@ export const FilmCard = styled.div`
     font-size: 1.5em;
     display: flex;
     justify-content: center;
-    color: yellow;
+    color: ${props => props.theme.colors.contrast};
+    text-align: center;
 }
 
 span {
-    color: aquamarine;
+    color: ${props => props.theme.colors.contrast};
     font-family: 'Kumbh Sans', sans-serif;
-    margin: 5% 0 0 5%;
 }
 
 p {
-    color: yellow;
+    color: ${props => props.theme.colors.text};
+    text-align:justify;
     font-family: 'Kumbh Sans', sans-serif;
-    margin: 5% 0 0 5%;
+    margin: 6% 4% ;
 }
 
 `

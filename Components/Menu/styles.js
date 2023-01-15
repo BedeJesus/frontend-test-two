@@ -9,7 +9,7 @@ export const Container = styled.div`
     padding: 0.6em;
     color: yellow;
     height: 5em;
-    background-color: black;
+    background-color: ${props => props.theme.colors.secundary_background};
     box-shadow: 0 0 10px 2px black;
 `
 
@@ -17,12 +17,12 @@ export const StarWars = styled(Link)`
 
     font-family: 'Star Jedi';
     font-size: 2em;
-    margin-left: 2%;
+    margin-left: 2.5%;
     text-decoration: none;
-    color: yellow;
+    color: #FEDB39;
 
     @media(max-width : 1000px) {
-    width: 30em;
+    width: 31em;
         
     }
 
@@ -35,14 +35,12 @@ export const Buttons = styled.div`
     font-size: 1.5em;
     width: 30em;
     overflow: hidden;
-    
-   
 
     a {
     font-family: 'Star Jedi';
     text-decoration: none;
-    color: yellow;
-    transition: 2s;
+    color: #FEDB39;
+    transition: .5s;
 
     &:hover{
     font-family: 'Star Jedi';
@@ -50,13 +48,7 @@ export const Buttons = styled.div`
 
     @media(max-width : 1000px) {
     display: none;
-    
-    
     }
-
-    
- 
-
 }
 
 `
@@ -64,8 +56,6 @@ export const Buttons = styled.div`
 export const ToggleOne = styled.div`
 
     margin-top: 1%;   
-    
-    
     @media(max-width : 1000px) {
         display: none;
     }
