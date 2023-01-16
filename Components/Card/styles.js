@@ -5,12 +5,14 @@ export const Container = styled.div`
     flex-direction: column;
     flex: none;
     background-color:${props => props.theme.colors.card_background} ;
-    margin-top:2% ;
-    margin-bottom:4% ;
+    
+    
+    margin-top:1% ;
+    margin-bottom:2% ;
     border: 3px solid red;
     border-radius: 7px;
-    width: 15em;
-    height: 16.5em;
+    width: 17em;
+    height: 17em;
     padding: 1%;
     font-family: 'Kumbh Sans', sans-serif;
     box-shadow: 10px 8px 13px rgb(0, 0, 0);
@@ -29,7 +31,6 @@ span{
 
 
 `
-
 
 export const Name = styled.h3`
 

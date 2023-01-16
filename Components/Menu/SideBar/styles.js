@@ -13,8 +13,10 @@ export const Container = styled.div`
     z-index: 2;
 
     a{
+        display: flex;
+        align-items: center;
     color: yellow;
-    font-family: 'Star Sith';
+    font-family: 'Star Jedi';
     text-decoration: none;   
     margin-top: 1em ;
     margin-bottom:1em ;
@@ -23,10 +25,11 @@ export const Container = styled.div`
     padding-right: 3.1em;    
     display: flex;
 
-    &:hover{
-    font-family: 'Star Jedi';
-    transition: .3s;
+    transition: .5s;
 
+
+    &:hover{
+        color:${props => props.theme.colors.primary_background} ;
     }
 }
 

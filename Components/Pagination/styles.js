@@ -7,6 +7,11 @@ export const Container = styled.ul`
     align-items: center;
     height: 5em;
 
+    @media(max-width : 800px) {
+        justify-content:center;
+       flex-wrap: wrap;
+    }
+
  button {
     
     background-color: transparent;

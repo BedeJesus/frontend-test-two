@@ -26,4 +26,3 @@ export default function Pagination({ itensInPage, totalItens, paginate }) {
     )
 }
 
-//ON CLICK IR PARA O TOPO DA TELA

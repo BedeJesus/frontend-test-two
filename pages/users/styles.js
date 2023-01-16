@@ -2,17 +2,59 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    background-color: ${props => props.theme.colors.primary_background};
     padding-top: 1.5em;
 
     h1 {
     color: ${props => props.theme.colors.contrast};
-    margin-left: 2.5%;
     font-family: 'Star Jedi';
     
 }
 
 `
+
+export const Top = styled.div`
+
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 3%;
+
+    @media(max-width : 800px) {
+        flex-direction: column;
+    }
+
+`
+
+export const Input = styled.input`
+
+
+    background-color: transparent;
+    border-color: ${props => props.theme.colors.contrast};
+    color:${props => props.theme.colors.contrast} ;
+    font-size: 1.5em;
+    padding-left: 1%;
+    border-top: transparent ;
+    border-right: transparent ;
+    border-left: transparent ;
+
+    width:min-content;
+
+    ::placeholder,
+    ::-webkit-input-placeholder {
+        color:${props => props.theme.colors.contrast} ;
+        
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @media(max-width : 800px) {
+       margin:2em 0;
+    }
+    
+`
+
+
 
 export const AllUsers = styled.div`
 
@@ -54,14 +96,6 @@ p {
     margin: 5% 0 0 5%;
 }
 
-`
-
-export const Loading = styled.h1`
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:90vh;
 `
 
 

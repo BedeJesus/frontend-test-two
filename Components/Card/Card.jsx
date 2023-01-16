@@ -15,6 +15,7 @@ export default function Card(props) {
                     <p> <span>Skin Color: </span>{props.person.skin_color}</p>
 
                 </Container>
+
             )
 
         } else if (props.type === 'term') {

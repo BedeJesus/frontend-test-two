@@ -6,7 +6,7 @@ import usePersistedState from './../utils/usePersistedState'
 import light from '../styles/themes/light';
 import dark from '../styles/themes/dark';
 
-export const ThemeContext = createContext()
+export const MenuContext = createContext()
 
 
 function MyApp({ Component, pageProps }) {
@@ -26,14 +26,14 @@ function MyApp({ Component, pageProps }) {
 
     <ThemeProvider theme={theme}>
 
-      <ThemeContext.Provider value={{ sideBar, setSideBar, showSideBar }}>
+      <MenuContext.Provider value={{ sideBar, setSideBar, showSideBar }}>
 
         <GlobalStyle />
 
         <Menu toggleTheme={toggleTheme} />
         <Component {...pageProps} />
 
-      </ThemeContext.Provider >
+      </MenuContext.Provider >
     </ThemeProvider>
 
 

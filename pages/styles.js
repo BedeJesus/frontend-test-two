@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
 
-
-
-
 export const Container = styled.div`
 
-background-color: ${props => props.theme.colors.primary_background};
-height: 100vh;
 padding-top: 1.5em;
 
 h1 {
@@ -21,14 +16,9 @@ export const Carrousel = styled.div`
 
     margin-top: 2%;
     display: flex;
-    /* background-color: red; */
-    
-`
+    flex-wrap: wrap;
+    justify-content:space-evenly;
 
-export const Test = styled.div`
-
-    background-color: red;
-    
 `
 
 
@@ -38,7 +28,7 @@ export const Loading = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    height:90vh;
+    height:70vh;
 
 `
 

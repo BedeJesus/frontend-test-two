@@ -2,16 +2,14 @@ import Link from 'next/link';
 import Toggle from '../Toggle/Toggle'
 import { List, X } from 'phosphor-react'
 import Sidebar from './SideBar/SideBar'
-import { ThemeContext } from '../../pages/_app'
+import { MenuContext } from '../../pages/_app'
 import { useContext } from 'react'
-import { Container, Buttons, Togglee, SubMenu, StarWars, ToggleTwo, ToggleOne } from './styles'
+import { Container, Buttons, SubMenu, StarWars, ToggleTwo, ToggleOne } from './styles'
 
 
 export default function Menu({ toggleTheme }) {
 
-    const { sideBar, showSideBar } = useContext(ThemeContext)
-
-
+    const { sideBar, showSideBar } = useContext(MenuContext)
 
     return (
         <Container>

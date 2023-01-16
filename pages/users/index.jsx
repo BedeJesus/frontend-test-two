@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import Pagination from '../../Components/Pagination/Pagination';
-import { Container, AllUsers, UserCard, Loading } from './styles'
+import { Container, AllUsers, UserCard, Top, Input } from './styles'
+import { MagnifyingGlass } from 'phosphor-react';
+
 
 export default function Users({ users }) {
 
-    const [loading, setLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
-    const usersInPage = 16
 
+    const usersInPage = 16
     const lastUserIndex = currentPage * usersInPage
     const firstUserIndex = lastUserIndex - usersInPage
-    const currentUsers = users.slice(firstUserIndex, lastUserIndex)
 
+    const [filter, setFilter] = useState('')
+    const filteredUsers = users.filter((user) => user.first_name.toLowerCase().includes(filter.toLowerCase()))
+
+    const currentUsers = filteredUsers.slice(firstUserIndex, lastUserIndex)
 
     const paginate = pageNumber => {
         setCurrentPage(pageNumber)
@@ -21,39 +25,38 @@ export default function Users({ users }) {
     return (
         <Container>
 
-            {loading ? (
+            <Top>
 
-                <>
-                    <h1>users on the blog</h1>
+                <h1>users on the blog</h1>
+                <Input placeholder='Filter'
+                    value={filter}
+                    onChange={(e) => setFilter(e.target.value)}
+                />
 
-                    <AllUsers>
+            </Top>
 
-                        {currentUsers.map((user) => (
+            <AllUsers>
 
-                            <UserCard key={user.id}>
-                                <h1>{user.first_name} {user.last_name}</h1>
-                                <p> <span>User Name:</span> {user.username}</p>
-                                <p> <span>Email:</span> {user.email}</p>
-                                <p> <span>Gender:</span> {user.gender}</p>
-                                <p> <span>Phone Number: </span> {user.phone_number.substr(0, 18)}</p>
-                                <p> <span>Id: </span>{user.id}</p>
-                            </UserCard>
-                        ))}
+                {currentUsers.map((user) => (
 
-                    </AllUsers>
+                    <UserCard key={user.id}>
+                        <h1>{user.first_name} {user.last_name}</h1>
+                        <p> <span>User Name:</span> {user.username}</p>
+                        <p> <span>Email:</span> {user.email}</p>
+                        <p> <span>Gender:</span> {user.gender}</p>
+                        <p> <span>Phone Number: </span> {user.phone_number.substr(0, 18)}</p>
+                        <p> <span>Id: </span>{user.id}</p>
+                    </UserCard>
+                ))}
 
-                    <Pagination itensInPage={usersInPage}
-                        totalItens={users.length}
-                        paginate={paginate}
-                    />
-                </>
+            </AllUsers>
 
-            ) : (
-                <>
-                    <Loading>Loading!</Loading>
-                </>
-            )}
-        </Container>
+            <Pagination itensInPage={usersInPage}
+                totalItens={filteredUsers.length}
+                paginate={paginate}
+            />
+
+        </Container >
     )
 
 }

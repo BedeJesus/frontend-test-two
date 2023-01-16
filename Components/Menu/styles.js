@@ -20,10 +20,14 @@ export const StarWars = styled(Link)`
     margin-left: 2.5%;
     text-decoration: none;
     color: #FEDB39;
+    transition: .4s;
 
     @media(max-width : 1000px) {
-    width: 31em;
-        
+        width: 31em;
+    }
+
+    &:hover{
+        color:${props => props.theme.colors.primary_background} ;
     }
 
 `
@@ -40,10 +44,10 @@ export const Buttons = styled.div`
     font-family: 'Star Jedi';
     text-decoration: none;
     color: #FEDB39;
-    transition: .5s;
+    transition: .4s;
 
     &:hover{
-    font-family: 'Star Jedi';
+    color:${props => props.theme.colors.primary_background} ;
     }
 
     @media(max-width : 1000px) {
@@ -70,6 +74,8 @@ export const ToggleTwo = styled.div`
         
     }
 
+    
+
 `
 
 export const SubMenu = styled.div`
@@ -84,9 +90,12 @@ export const SubMenu = styled.div`
         background-color:transparent;
         color: yellow;
         border: none;
+        transition: .4s;
 
         &:hover{
             cursor: pointer;
+            color:${props => props.theme.colors.primary_background} ;
+
         }
 
     }
