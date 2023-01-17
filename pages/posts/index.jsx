@@ -40,7 +40,7 @@ export default function Posts({ posts }) {
 
                 {currentPosts.map((post) => (
 
-                    <PostCard>
+                    <PostCard key={post.id}>
                         <h1>{post.title}</h1>
                         <p> <span>Resume:</span> {post.body}</p>
                     </PostCard>

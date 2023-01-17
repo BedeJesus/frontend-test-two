@@ -38,7 +38,7 @@ export default function Comments({ comments }) {
 
                 {currentComments.map((comment) => (
 
-                    <CommentCard>
+                    <CommentCard key={comment.id}>
                         <h1>{comment.name}</h1>
                         <p> <span>Resume:</span> {comment.body}</p>
                     </CommentCard>
