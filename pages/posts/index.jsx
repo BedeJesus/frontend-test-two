@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useState } from 'react'
 import Pagination from '../../Components/Pagination/Pagination';
 import { Container, AllPosts, PostCard, Top, Input } from './styles'
 
@@ -13,13 +13,11 @@ export default function Posts({ posts }) {
 
     const [filter, setFilter] = useState('')
     const filteredPosts = posts.filter((posts) => posts.title.toLowerCase().includes(filter.toLowerCase()))
-
     const currentPosts = filteredPosts.slice(firstPostIndex, lastPostIndex)
 
 
     const paginate = pageNumber => {
         setCurrentPage(pageNumber)
-
     };
 
 
@@ -54,9 +52,6 @@ export default function Posts({ posts }) {
                 totalItens={filteredPosts.length}
                 paginate={paginate}
             />
-
-
-
 
         </Container>
     )

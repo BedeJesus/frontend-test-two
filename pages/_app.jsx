@@ -2,7 +2,6 @@ import { createContext, useState } from 'react';
 import Menu from '../Components/Menu/Menu'
 import GlobalStyle from '../styles/global.js'
 import { ThemeProvider } from 'styled-components'
-import usePersistedState from './../utils/usePersistedState'
 import light from '../styles/themes/light';
 import dark from '../styles/themes/dark';
 
@@ -19,7 +18,6 @@ function MyApp({ Component, pageProps }) {
   const toggleTheme = () => {
     setTheme(theme === dark ? light : dark)
   }
-
 
 
   return (

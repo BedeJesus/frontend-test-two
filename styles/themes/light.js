@@ -6,7 +6,6 @@ export default {
         card_background:'#B5DEFF',
         text:'#000',
         contrast:'#D61C4E'
-        
     }
 }
 

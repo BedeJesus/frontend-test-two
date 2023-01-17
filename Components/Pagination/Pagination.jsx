@@ -13,13 +13,16 @@ export default function Pagination({ itensInPage, totalItens, paginate }) {
 
         <nav>
             <Container>
+
                 {pageNumbers.map(number => (
+                    
                     <div key={number} >
-                        <button onClick={() => paginate(number)&& console.log('clicou')}  >
+                        <button onClick={() => paginate(number)}  >
                             {number}
                         </button>
                     </div>
                 ))}
+
             </Container>
         </nav>
 

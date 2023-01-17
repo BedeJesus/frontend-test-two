@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import Pagination from '../../Components/Pagination/Pagination';
 import { Container, AllUsers, UserCard, Top, Input } from './styles'
-import { MagnifyingGlass } from 'phosphor-react';
-
 
 export default function Users({ users }) {
 

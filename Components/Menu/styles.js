@@ -7,7 +7,6 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0.6em;
-    color: yellow;
     height: 5em;
     background-color: ${props => props.theme.colors.secundary_background};
     box-shadow: 0 0 10px 2px black;
@@ -38,22 +37,21 @@ export const Buttons = styled.div`
     justify-content: space-evenly;
     font-size: 1.5em;
     width: 30em;
-    overflow: hidden;
+    
+    a{
+        font-family: 'Star Jedi';
+        text-decoration: none;
+        color: #FEDB39;
+        transition: .4s;
 
-    a {
-    font-family: 'Star Jedi';
-    text-decoration: none;
-    color: #FEDB39;
-    transition: .4s;
+        &:hover{
+            color:${props => props.theme.colors.primary_background} ;
+        }
 
-    &:hover{
-    color:${props => props.theme.colors.primary_background} ;
+        @media(max-width : 1000px) {
+            display: none;
+        }
     }
-
-    @media(max-width : 1000px) {
-    display: none;
-    }
-}
 
 `
 
@@ -73,8 +71,6 @@ export const ToggleTwo = styled.div`
         margin-right: 1em;
         
     }
-
-    
 
 `
 

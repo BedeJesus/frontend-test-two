@@ -24,7 +24,7 @@ export default function Menu({ toggleTheme }) {
 
                 <Link href='/users'>users</Link>
                 <Link href='/posts'>Posts</Link>
-                <Link href='/planets'>Colocar Aqui</Link>
+                <Link href='/comments'>Comments</Link>
 
             </Buttons>
 
@@ -33,7 +33,6 @@ export default function Menu({ toggleTheme }) {
                 <ToggleTwo>
                     <Toggle toggleTheme={toggleTheme} />
                 </ToggleTwo>
-
 
 
                 {sideBar ? (

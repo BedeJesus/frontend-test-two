@@ -6,29 +6,28 @@ export const Container = styled.ul`
     justify-content: space-evenly;
     align-items: center;
     height: 5em;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
 
     @media(max-width : 800px) {
         justify-content:center;
-       flex-wrap: wrap;
     }
 
- button {
+    button {
     
     background-color: transparent;
     border: 0.125em solid ${props => props.theme.colors.contrast};
     border-radius: 1em;
     color: ${props => props.theme.colors.contrast};
+
+    margin: 1em 0;
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
-    line-height: normal;
+    
     padding: 1em 2.3em;
     text-align: center;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    
-    &:disabled{
-        pointer-events: none;
-    }
 
     &:hover {
     color: black;
@@ -41,7 +40,7 @@ export const Container = styled.ul`
     &:active {
     box-shadow: none;
     transform: translateY(0);
-}
+    }
 }
 
 

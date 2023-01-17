@@ -1,49 +1,17 @@
 import { useEffect, useState, useRef } from 'react'
 import Card from '../Components/Card/Card'
-import { Container, Carrousel, Loading } from './styles'
+import { Container, Carrousel, Loading,Gif } from './styles'
 import axios from "axios";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import image from './../utils/loading-gif.gif'
 
 export default function Row() {
 
     const [people, setPeople] = useState([])
     const [loading, setLoading] = useState(false)
+    
     const shouldLog = useRef(true)
+
     const desiredCharacters = [1, 4, 5, 13, 14, 20, 21, 22]
-
-
-    // useEffect(() => {
-    //     if (shouldLog.current) {
-
-    //         async function getData() {
-    //             shouldLog.current = false
-
-    //             for (let i = 1; i <= 30; i++) {
-
-    //                 if (i === 17) {
-    //                     i++ //api doesnt have the 17º character
-    //                 }
-
-    //                 await axios.get(`https://swapi.dev/api/people/${i}`).then((response) => {
-    //                     setPeople([...people, people.unshift(response.data)])
-    //                     people.sort(function (a, b) {
-    //                         return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-
-    //                     });
-    //                 })
-    //             }
-    //             setLoading(true)
-    //         }
-
-    //         getData()
-    //     }
-    // }, [])
-
 
     useEffect(() => {
         if (shouldLog.current) {
@@ -60,21 +28,10 @@ export default function Row() {
 
                 setLoading(true)
             }
-
             getData()
         }
     }, [])
 
-
-
-
-    function SetSlidesPerView() {
-        if (window.innerWidth <= 1000) {
-            return 2
-        } else {
-            return 4
-        }
-    }
 
     return (
         <Container>
@@ -86,9 +43,6 @@ export default function Row() {
                     <h1>Main Characters</h1>
 
                     <Carrousel>
-
-
-                        {console.log(people)}
 
                         <Card
                             person={people[6]}
@@ -116,17 +70,10 @@ export default function Row() {
                             type={'character'}
                         />
 
-                        {/* <Card person={people[0]}
-                            description='Darth Sidious, known as the Emperor, was a Dark Lord of the Sith and Emperor of the Galactic Empire. He was the mentor of Darth Vader'
-                            type={'character'}
-                        /> */}
-
                         <Card person={people[1]}
                             description='Yoda was a legendary Jedi Master who led the Jedi Order in the years leading up to its destruction by the Sith. He was the mentor of Luke Skywalker'
                             type={'character'}
                         />
-
-
 
                     </Carrousel>
 
@@ -164,7 +111,9 @@ export default function Row() {
 
             ) : (
                 <>
-                    <Loading>Loading!</Loading>
+            
+                    <Loading>Loading! <Gif src={image} /></Loading>
+
                 </>
             )}
 

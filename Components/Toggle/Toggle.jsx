@@ -7,9 +7,8 @@ import { ThemeContext } from 'styled-components'
 export default function Toggle({ toggleTheme }) {
 
 
-    const { colors, title } = useContext(ThemeContext)
+    const { title } = useContext(ThemeContext)
 
-   
 
     return (
         <Container>

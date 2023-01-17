@@ -4,8 +4,8 @@ export default async (req, res) => {
   const json = await result.json()
 
   res.status(200).json({
-    users : json
+    users: json
   })
 
-    
+
 }

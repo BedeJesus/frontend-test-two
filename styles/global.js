@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'; 
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -10,8 +10,17 @@ export default createGlobalStyle`
 
 body{
     background-color: ${props => props.theme.colors.primary_background};
-}
 
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: ${props => props.theme.colors.contrast};
+        border-radius: 10px;
+    }   
+}
 
 `
 

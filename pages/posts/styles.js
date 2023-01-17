@@ -56,10 +56,10 @@ export const Input = styled.input`
 
 export const AllPosts = styled.div`
 
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
-margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3%;
 
 `
 
@@ -87,23 +87,15 @@ export const PostCard = styled.div`
 
 span {
     color: ${props => props.theme.colors.contrast};
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
     color: ${props => props.theme.colors.text};
     text-align:justify;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 6% 4% ;
 }
 
 `
 
-export const Loading = styled.h1`
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:90vh;
-
-`

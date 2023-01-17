@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from 'next/image';
 
 
 export const Container = styled.div`
@@ -30,5 +31,12 @@ export const Loading = styled.h1`
     align-items: center;
     height:70vh;
 
+`
+export const Gif = styled(Image)`
+
+    width: 3%;
+    height: fit-content;
+    margin-left: 1%;
+    
 `
 

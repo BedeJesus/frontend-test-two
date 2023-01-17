@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-    padding-top: 1.5em;
+padding-top: 1.5em;
 
-    h1 {
+h1 {
     color: ${props => props.theme.colors.contrast};
     font-family: 'Star Jedi';
 }
@@ -24,6 +24,7 @@ export const Top = styled.div`
 `
 
 export const Input = styled.input`
+
 
     background-color: transparent;
     border-color: ${props => props.theme.colors.contrast};
@@ -52,47 +53,48 @@ export const Input = styled.input`
     
 `
 
-export const AllUsers = styled.div`
+export const AllComments = styled.div`
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 3%;
+
 `
 
-export const UserCard = styled.div`
+export const CommentCard = styled.div`
 
     display: flex;
     flex-direction: column;
     background-color: ${props => props.theme.colors.card_background};
     margin-bottom: 1em;
-    height: 15em;
+    height: 20em;
     width: 21em;
-    border: 3px solid red;
+    border: 4px solid red;
     border-radius: 10px;
     box-shadow: 10px 8px 13px rgb(0, 0, 0);
+
 
     h1 {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
     color: ${props => props.theme.colors.contrast};
+    text-align: center;
 }
 
 span {
     color: ${props => props.theme.colors.contrast};
-    font-weight: 700;
     font-family: 'Poppins', sans-serif;
-    margin: 5% 0 0 5%;
+
 }
 
 p {
     color: ${props => props.theme.colors.text};
+    text-align:justify;
     font-family: 'Poppins', sans-serif;
-    margin: 5% 0 0 5%;
+    margin: 6% 4% ;
 }
 
 `
-
-
 
