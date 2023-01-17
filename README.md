@@ -1,49 +1,18 @@
-# **TESTE DE FRONTEND**
+<h1>Star Blog</h1>
+👨‍💻 Blog sobre o mundo de Star Wars. <br>
+🧑🏽‍🦰 Foi desenvolvido com a API "SWAPI API" , disponivel em https://swapi.dev/documentation<br>
+📕 Foi usadas duas outras API's para dados falsos: https://random-data-api.com/documentation e https://jsonplaceholder.typicode.com/<br>
+🪄 Informações paginaveis e filtraveis<br>
+🤏🏽 Site totalmente responsivo.
 
-Neste teste, você será livre para criar uma aplicação consumindo a API que você quiser e com o tema que desejar.
-Contudo, o seu projeto deverá seguir os requisitos mínimos de conteúdo.
+<h2>Linguagens utilizadas:</h2>
+    - NextJS
+    - Styled Components
+    
+<h2>Deskop mostrando a Home Page e tela de users</h2>  
+<img src ="for_readme/desktop_home_users.gif">
 
-SUGESTÕES DE APIS:
-https://github.com/public-apis/public-apis
+<h2>Mobile mostrando as telas de posts e comments</h2>  
+<img src ="for_readme/mobile_posts_comments.gif">
 
----------------------------------------------------------------------
-## REQUISITOS:
 
-## GIT
-- Faça um fork deste repositório.
-- Criar uma branch para codar as suas features.
-- Criar um pull-request quando o teste for finalizado e submetido.
-
-##### **NOTA: Será avaliado também se o nome da branch, títulos de commit, push e comentários possuem boa legibilidade.**
-
------------------------------------------------------
-
-## FRAMEWORK
-
-- Utilizar as ferramentas presentes no framework do projeto (NEXT.JS).
-
------------------------------------------------------
-
-## ESTILOS
-
-- Os estilos deste teste devem ser feitos em styled-components (evite utilizar bootstrap, mas se necessário, use).
-- O projeto deverá conter tema claro/escuro e forma do usuário alterar entre os dois.
-- Deve ser totalmente responsivo.
-
------------------------------------------------------
-
-## PROJETO
-
-- Deve utilizar useContext, useState e useEffect.
-- Ter ao menos 3 paginas navegáveis com router (ex: um navbar para facilitar a navegação).
-- Deve consumir uma API de sua escolha, desde que os dados sejam filtraveis e paginados. No mínimo 15 itens por requisição.
-
--------------------------------------------------------
-
-## REQUISITOS DIFERENCIAIS:
-
-- Código tentando seguir SOLID.
-- Código performático.
-- Utilizar inglês no projeto todo.
-- Utilizar Injeção de Dependências.
-- Fazer deploy do mesmo (heroku, netlify, aws, vercel, github pages ou outro da preferência).
