@@ -6,7 +6,7 @@
 🤏🏽 Site totalmente responsivo.
 
 <h2>Linguagens utilizadas:</h2>
-    - NextJS
+    - NextJS <br>
     - Styled Components
     
 <h2>Deskop mostrando a Home Page e tela de users</h2>  
